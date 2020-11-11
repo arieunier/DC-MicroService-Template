@@ -1,0 +1,40 @@
+{
+  "name": "Micro Service Template",
+  "description" : "Reacts to an incoming Micro Service message on a given topic, kafka or rabbitmq.You can reuse an existing kafka/rabbit or deploy a new one in this app.",
+  "repository":"https://github.com/arieunier/cometdtokafka",
+  "keywords": ["python", "kafka"], 
+  "scripts": {
+    },
+  "oppycopy": {
+    "notification" : {
+      "quantity": 1,
+      "size": "standard-1x"
+    }
+  },
+  "addons": [
+    {"plan": "timber-logging:free"}
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "env":
+    {
+      "QUEUING_SYSTEM": {
+        "Description" : "Which system to use for the queuing system: values are KAFKA/CLOUDAMQP. Will default to CLOUDAMQP",
+        "value" : "CLOUDAMQP",
+        "required" : true
+      },
+      "LOG_LEVEL": {
+        "Description" : "Log Level",
+        "value" : "INFO",
+        "required" : true
+      },
+      "SUBSCRIBE_CHANNEL": {
+        "Description" : "name of the channel the service must connect to when starting",
+        "value" : "fill me",
+        "required" : true
+      }
+    }
+}
