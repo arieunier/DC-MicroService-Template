@@ -1,1 +1,1 @@
-template: export PYTHONPATH=.:./appsrc; python appsrc/template.py
+template: export PYTHONPATH=.:./appsrc:./appsrc/libs/; python appsrc/template.py
