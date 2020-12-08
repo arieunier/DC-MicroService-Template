@@ -1,7 +1,7 @@
 {
   "name": "Micro Service Template",
   "description" : "Reacts to an incoming Micro Service message on a given topic, kafka or rabbitmq.You can reuse an existing kafka/rabbit or deploy a new one in this app.",
-  "repository":"https://github.com/arieunier/cometdtokafka",
+  "repository":"https://github.com/arieunier/DC-MicroService-Template",
   "keywords": ["python", "kafka"], 
   "scripts": {
     },
